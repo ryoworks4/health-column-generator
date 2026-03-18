@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康コラム自動生成 | RyoWorks</title>
+    <meta name="description" content="テーマを入力するだけで、患者さん向けの健康コラムをAIが自動生成するツール">
+    <meta property="og:title" content="健康コラム自動生成 | RyoWorks">
+    <meta property="og:description" content="テーマを入力するだけで、患者さん向けの健康コラムをAIが自動生成">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📝 健康コラム自動生成</h1>
+        <p>テーマを入力するだけで、患者さん向けのコラムをAIが作成します</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <label for="topic-input">コラムのテーマ</label>
+                <input
+                    type="text"
+                    id="topic-input"
+                    placeholder="例: 花粉症の対策、熱中症予防、インフルエンザ..."
+                    maxlength="200"
+                >
+                <div class="char-count"><span id="char-count">0</span> / 200</div>
+
+                <label>出力フォーマット</label>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="blog">
+                        <span class="mode-icon">📄</span>
+                        <span class="mode-label">ブログ記事</span>
+                        <span class="mode-desc">500〜800文字の記事</span>
+                    </button>
+                    <button class="mode-btn" data-mode="sns">
+                        <span class="mode-icon">📱</span>
+                        <span class="mode-label">SNS投稿</span>
+                        <span class="mode-desc">140文字以内の短文</span>
+                    </button>
+                    <button class="mode-btn" data-mode="poster">
+                        <span class="mode-icon">🏥</span>
+                        <span class="mode-label">院内掲示</span>
+                        <span class="mode-desc">掲示物向けの構成</span>
+                    </button>
+                </div>
+
+                <label>トーン（任意）</label>
+                <div class="tone-buttons">
+                    <button class="tone-btn active" data-tone="friendly">やさしい</button>
+                    <button class="tone-btn" data-tone="professional">きっちり</button>
+                    <button class="tone-btn" data-tone="casual">カジュアル</button>
+                </div>
+
+                <button id="generate-btn" class="primary-btn">コラムを生成する</button>
+            </div>
+
+            <div class="output-section">
+                <div id="result-area" class="result-area">
+                    <p class="placeholder-text">テーマを入力して「コラムを生成する」を押してください</p>
+                </div>
+                <button id="copy-btn" class="copy-btn" style="display: none;">コピー</button>
+            </div>
+        </div>
+
+        <section class="examples">
+            <h2>こんなテーマで使えます</h2>
+            <div class="example-tags">
+                <button class="example-tag">花粉症の対策</button>
+                <button class="example-tag">熱中症予防</button>
+                <button class="example-tag">インフルエンザ</button>
+                <button class="example-tag">腰痛の予防</button>
+                <button class="example-tag">睡眠の質を上げる</button>
+                <button class="example-tag">高血圧の食事</button>
+                <button class="example-tag">ストレス解消法</button>
+                <button class="example-tag">健康診断の準備</button>
+            </div>
+        </section>
+
+        <section class="how-to-use">
+            <h2>使い方</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>健康テーマを入力</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>フォーマットとトーンを選ぶ</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>AIがコラムを自動生成</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>※ このツールはポートフォリオ作品です。生成された内容は必ず医療従事者が確認してからご使用ください。</p>
+        <p>&copy; 2026 RyoWorks｜医療×AI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
