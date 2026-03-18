@@ -97,7 +97,8 @@ generateBtn.addEventListener('click', async function () {
             '<span class="result-topic">' + escapeHtml(topic) + '</span>' +
             '<span class="result-mode">' + modeLabel[selectedMode] + '</span>' +
             '</div>' +
-            '<div class="result-text">' + escapeHtml(data.result) + '</div>' +
+            '<div class="result-text">' + escapeHtml(data.result) + '...</div>' +
+            '<p class="demo-note">※ デモ版のため文字数に制限があります</p>' +
             '</div>';
         copyBtn.style.display = 'block';
     } catch (error) {

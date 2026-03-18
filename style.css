@@ -233,6 +233,15 @@ label {
     font-size: 0.9rem;
 }
 
+.demo-note {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8ed;
+    font-size: 0.8rem;
+    color: #999;
+    text-align: right;
+}
+
 .copy-btn {
     margin-top: 10px;
     padding: 8px 20px;
